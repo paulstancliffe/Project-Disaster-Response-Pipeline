@@ -15,7 +15,22 @@ The repository contains the following folders and files:
     notebook, the python script derived from the notebook in train_classifier.py and the final trained model saved as a
     pickle file in classifier.pkl.
     
-   - Inside the app folder
+   - Inside the app folder is the web app with the python script to run the app called run.py and then a template folder
+   containing the two front-end html files master.html and go.html.
+   
+### Dependencies
+
+   - Python 3.6
+   - pandas 0.23.3
+   - sqlalchemy 1.1.13
+   - numpy 1.12.1
+   - re 2.2.1
+   - nltk 3.2.5
+   - sklearn 0.19.1
+   - pickle
+   - Flask
+   - plotly
+   - json
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
