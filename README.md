@@ -7,9 +7,13 @@ This project is part of Udacity's Data Science Nanodegree. The aim of the projec
 ### Repository Contents
 The repository contains the following folders and files:
 
-    - Inside the data folder is the work related to the ETL pipeline, including the original EDA Jupyter notebook, the csv files containing the messages to be used in training the model, the finalised ETL Script in process_data.py and the DisasterResponse database created by the scipt.
+    - Inside the data folder is the work related to the ETL pipeline, including the original EDA Jupyter notebook, the csv
+    files containing the messages to be used in training the model, the finalised ETL Script in process_data.py and the
+    DisasterResponse database created by the scipt.
     
-    - Inside the models folder is the work related to the Machine Learning pipeline, and includes the original ML Jupyter notebook, the python script derived from the notebook in train_classifier.py and the final trained model saved as a pickle file in classifier.pkl.
+    - Inside the models folder is the work related to the Machine Learning pipeline, and includes the original ML Jupyter
+    notebook, the python script derived from the notebook in train_classifier.py and the final trained model saved as a
+    pickle file in classifier.pkl.
     
     - Inside the app folder
 
