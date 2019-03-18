@@ -12,8 +12,8 @@ The repository contains the following folders and files:
     DisasterResponse database created by the scipt.
    
    - Inside the models folder is the work related to the Machine Learning pipeline, and includes the original ML Jupyter
-    notebook, the python script derived from the notebook in train_classifier.py and the final trained model saved as a
-    pickle file in classifier.pkl.
+    notebook, the python script derived from the notebook in train_classifier.py. The final trained model output saved as a
+    pickle file called classifier.pkl is not included in the repository due to size restrictions.
     
    - Inside the app folder is the web app with the python script to run the app called run.py and then a template folder
    containing the two front-end html files master.html and go.html.
