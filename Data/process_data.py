@@ -45,7 +45,9 @@ def clean_data(df):
 
     # concatenate the original dataframe with the new `categories` dataframe
     df = pd.concat([df,categories], axis=1)
-    
+
+    # drop child_alone label with no training labels 
+    df = df.drop(['child_alone'],axis=1)
     # drop duplicates
     df = df.drop_duplicates()
     # drop rows where 'related' column is equal to 2 
