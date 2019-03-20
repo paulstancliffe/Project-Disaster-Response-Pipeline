@@ -37,21 +37,23 @@ model = joblib.load("../models/classifier.pkl")
 @app.route('/')
 @app.route('/index')
 def index():
-    
+    '''
+    creates visuals in plotly using database saved
+    '''
     # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    # collect label data from training dataset
     label_counts = df.iloc[:,4:].sum(axis=0)
     label_names = list(df.columns.values[4:])
-    
+
+    # calculate number of labels per message
     rowsums = df.iloc[:,4:].sum(axis=1)
     cat_counts = rowsums.value_counts()
     cat_names = cat_counts.index
     
-    # create visuals
-    # TODO: Below is an example - modify to create your own visuals
+    # create 3 visuals with plotly
     graphs = [
         {
             'data': [
@@ -71,6 +73,7 @@ def index():
                 }
             }
         },
+        # second visual showing training label counts
         {
             'data': [
                 Bar(
@@ -89,6 +92,7 @@ def index():
                 }
             }
         },
+        # third visual with number of labels per message
         {
             'data': [
                 Bar(
