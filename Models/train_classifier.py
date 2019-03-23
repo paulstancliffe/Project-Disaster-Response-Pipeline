@@ -88,13 +88,9 @@ def evaluate_model(model, X_test, Y_test, category_names):
     '''
     # get predictions 
     Y_preds = model.predict(X_test)
-    # print classification report
+    
+    # print classification report and overall accuracy
     print(classification_report(Y_preds, Y_test.values, target_names=category_names))
-    # print accuracy scores 
-    print("\t\tAccuracy Score: ")
-    print("\t\t---------------")
-    for i in range(Y_test.shape[1]):
-        print('%25s : %.2f' %(category_names[i], accuracy_score(Y_test.values[:,i], Y_preds[:,i])))
     overall_accuracy = (Y_preds == Y_test).mean().mean()
     print("\t\t---------------")
     print('Average Overall Accuracy : {0:.2f}% \n'.format(overall_accuracy*100))
